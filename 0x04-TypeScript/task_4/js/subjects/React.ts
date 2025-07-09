@@ -1,4 +1,5 @@
-
+/// <reference path="Subject.ts" />
+/// <reference path="Teacher.ts" />
 
 namespace Subjects {
 	export interface Teacher {
@@ -11,7 +12,7 @@ namespace Subjects {
 	  }
   
 	  getAvailableTeacher(): string {
-		if (this.teacher.experienceTeachingReact === undefined || this.teacher.experienceTeachingReact <= 0) {
+		if (!this.teacher.experienceTeachingReact) {
 		  return 'No available teacher';
 		}
 		return `Available Teacher: ${this.teacher.firstName}`;
