@@ -26,6 +26,20 @@ const teacher3: Teacher = {
 	fullTimeEmployee: true,
 	numberOfReports: 17,
   };
+interface printTeacherFunction {
+	(firstName: string, lastName: string): string;
+}
+
+const printTeacher:printTeacherFunction = (firstName, lastName) => {
+	return `${firstName.charAt(0)}. ${lastName}`;
+}
+
+
+printTeacher("jean", "pierre") 
+
+
+
+
   console.log(director1);
   
   console.log(teacher3);
